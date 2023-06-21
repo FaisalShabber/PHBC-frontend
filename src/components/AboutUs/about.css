@@ -1,0 +1,91 @@
+.pm {
+    position: relative;
+    height: 30rem;
+  }
+  
+  .p1 {
+    position: absolute;
+    top: 24%;
+    width: 364;
+    height: 296px;
+    left: 15%;
+  }
+  
+  
+  .p2 {
+    position: absolute;
+    top: 8.5%;
+    right: 29.1%;
+    width: 348px;
+    height: 275px;
+  
+  }
+  
+  .p3 {
+    position: absolute;
+    top: 21%;
+    right: 20%;
+    width: 340px;
+    height: 290px;
+  
+  }
+  
+  .p1,
+  .p2,
+  .p3 {
+    transition: all 500ms ease-in;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .pm:hover .p1,
+  .pm:hover .p2,
+  .pm:hover .p3 {
+    filter: blur(4px);
+  }
+  
+  .pm .p1:hover,
+  .pm .p2:hover,
+  .pm .p3:hover {
+    filter: none;
+    transform: scale(1.2);
+    z-index: 1;
+  }
+  
+  @media only screen and (min-width: 380px) and (max-width: 420px) {
+  
+    .p1 {
+      height: 152px;
+      width: 187px;
+      left: 16px;
+      
+  
+  
+  
+    }
+  
+    .p3 {
+      height: 149px;
+      width: 174px;
+      right: 34px;
+  
+  
+    }
+  
+    .p2 {
+      height: 141px;
+      width: 179px;
+      left: 60px;
+      top: 18px;
+  
+    }
+  
+    .pm {
+      height: 15rem;
+  
+    }
+  }
