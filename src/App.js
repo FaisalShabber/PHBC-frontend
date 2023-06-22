@@ -28,6 +28,7 @@ import VerticalTimeline from "./components/VerticalTimeline";
 // import fp3 from "../../../src/assets/fp3.png";
 function App() {
   const [activeLink, setActiveLink] = useState("about");
+  
 
   const news = [
     {

@@ -46,7 +46,7 @@ function MobileNav({ open, setOpen }) {
   );
 }
 
-export default function Navbar({ setActiveLink, underline, title }) {
+export default function Navbar({ setActiveLink, underline, title,shawMenu }) {
   const [open, setOpen] = useState(false);
   return (
     <nav className="flex items-center ">
@@ -57,6 +57,7 @@ export default function Navbar({ setActiveLink, underline, title }) {
         ActiveLink={""}
         setActiveLink={setActiveLink}
         underline={underline}
+        shawMenu={shawMenu}
       />
     </nav>
   );

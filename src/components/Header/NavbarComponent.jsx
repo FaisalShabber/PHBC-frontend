@@ -1,26 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const NavbarComponent = ({ logo, title, setActiveLink, underline }) => {
-  const [open, setOpen] = useState(false);
+// AiOutlineMenu
+const NavbarComponent = ({ logo, title, setActiveLink, underline ,shawMenu}) => {
+  const [open, setOpen] = useState(true);
   return (
     <>
-      <div
-        className={`absolute top-0 left-0 h-screen w-screen bg-white transform z-50 ${
-          open ? "-translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out filter drop-shadow-md`}
-      >
-        <div className="flex items-center justify-center filter drop-shadow-md bg-white h-20">
-          {/*logo container*/}
-          <Link className="text-xl font-semibold" href="/">
-            LOGO
-          </Link>
-        </div>
-        <div className="">
+      <div className="">
           <div className="flex align-canter items-center">
             {/* desktop nav */}
-            <div className="md:flex text-transform: uppercase justify-between mt-[5rem] lg:px-20">
-              <ul className="p-5">
+           
+            <div className="mt-[-5rem] md:mt-[5rem] md:flex text-transform: uppercase justify-between lg:mt-[5rem] lg:px-20">
+              {shawMenu && <ul className="p-5  " >
                 <li className="mb-5" onClick={() => setActiveLink("about")}>
                   <p
                     className={` text-white hover:text-slate-200 text-3xl underline-offset-8 cursor-pointer tracking-widest ${
@@ -90,8 +81,8 @@ const NavbarComponent = ({ logo, title, setActiveLink, underline }) => {
                     Contact
                   </p>
                 </li>
-              </ul>
-              <div className="lg:w-3/12 hidden">
+              </ul>}
+              <div className=" w-2/12 float float-right  lg:w-3/12 lg:float-right">
                 <Link className="" href="/">
                   <img
                     src={logo}
@@ -106,12 +97,11 @@ const NavbarComponent = ({ logo, title, setActiveLink, underline }) => {
             </div>
           </div>
           <div className="float-right 2xl:pr-[10rem] lg:pr-[5rem] pb-5 ml-10 lg:pb-10">
-            <h1 class="text-xl lg:text-6xl  text-white tracking-wider font-serif ">
+            <h1 class="text-1px lg:text-6xl  text-white tracking-wider font-serif ">
               {title}
             </h1>
           </div>
         </div>
-      </div>
     </>
   );
 };
