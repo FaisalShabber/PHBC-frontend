@@ -13,20 +13,23 @@ export const Events = () => {
         <div className="flex justify-center 2xl:py-16 lg:py-10 gap-16">
           <EventComponent
             eventDate={"10.6.23"}
-            eventDateColor="red"
+            eventDateColor="#Ff0021"
             eventDiscription="International Conference on Advances in Business Management and Information Technology"
+            eventCountry="Budapest"
           />
           <EventComponent
             eventDate={"28.8.23"}
             eventDateColor="#34493c"
             eventDiscription="International Conference on Management and Information Technology (ICMIT)"
+            eventCountry="Pakistan"
           />
         </div>
+
         <div className="text-center ">
           <p className="underline underline-offset-8 text-[#34493c] lg:text-4xl ">
             Explore and join our events
           </p>
-        </div>{" "}
+        </div>
       </div>
     </div>
   );

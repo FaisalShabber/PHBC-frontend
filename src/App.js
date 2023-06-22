@@ -1,8 +1,8 @@
 import "./App.css";
-import { react, useState } from "react";
+import { useState } from "react";
 import TopNav from "../src/components/Header/TopNav";
 import { News } from "./components/News/New";
-import { AboutUs } from "./components/AboutUs/AboutUs";
+// import { AboutUs } from "./components/AboutUs/AboutUs";
 import { Contribution } from "./components/Contribution/Contribution";
 import { Events } from "./components/Events/Events";
 import Footer from "./components/Footer/Footer";
@@ -10,13 +10,20 @@ import h1 from "../src/assets/h1.png";
 import missionbg from "../src/assets/missionbg.jpg";
 import eventbg from "../src/assets/eventbg.jpg";
 import relationbg from "../src/assets/relationbg.jpg";
+import teambg from "../src/assets/teambg.jpg";
 import fp1 from "../src/assets/fp1.png";
 import fp2 from "../src/assets/fp2.png";
 import fp3 from "../src/assets/fp3.png";
 import mission1 from "../src/assets/mission1.jpg";
 import mission2 from "../src/assets/mission2.jpg";
 import mission3 from "../src/assets/mission3.jpg";
+import mission4 from "../src/assets/mission4.jpg";
+import mission5 from "../src/assets/mission5.jpg";
+import mission6 from "../src/assets/mission6.jpg";
 import CustomeTDR from "./components/CustomeTDR";
+import CustomeEvent from "./components/CustomeEvent";
+import CustomeTeam from "./components/CustomeTeam";
+import VerticalTimeline from "./components/VerticalTimeline";
 // import fp2 from "../../../src/assets/fp2.png";
 // import fp3 from "../../../src/assets/fp3.png";
 function App() {
@@ -78,10 +85,38 @@ comprehensive concept paper.`,
       photo: mission3,
     },
   ];
+  const missions1 = [
+    {
+      title: `Sustainability`,
+      discription: `We aim to promote bilateral trade between Hungary and Pakistan by creating a platform that
+brings together businesses, entrepreneurs, and
+investors from both countries. We organize trade missions, business forums, and networking
+events to encourage collaboration and facilitate
+business partnerships.`,
+      photo: mission4,
+    },
+    {
+      title: `Innovation`,
+      discription: `We provide our members with valuable information on the latest market trends, regulatory
+changes, investment opportunities, and business best practices. We believe that access
+to reliable information is essential for making
+informed business decisions.`,
+      photo: mission5,
+    },
+    {
+      title: `Integrity`,
+      discription: `We believe in building sustainable partnerships
+that benefit both Hungary and Pakistan. We encourage our members to develop partnerships
+based on shared values, mutual respect, and a
+commitment to long-term growth.`,
+      photo: mission6,
+    },
+  ];
   return (
     <>
       {activeLink === "about" ? (
         <>
+          {/* About */}
           <TopNav
             setActiveLink={setActiveLink}
             underline={activeLink}
@@ -100,14 +135,21 @@ comprehensive concept paper.`,
             textColor={" #536068"}
             descriptionColor={"#536068"}
             BgColor={"#e2e1dc"}
+            // customeReadMore={"Read More"}
           />
-          <News news={news} CustomeHeading={"What‘s new?"} />
+          <News
+            news={news}
+            CustomeNewsHeading={"What‘s new?"}
+            // CustomeArticleHeading={"To the articles"}
+            customReadMore={"ReadMore"}
+          />
           <Contribution />
           <Events />
           <Footer />
         </>
       ) : activeLink === "mission" ? (
         <>
+          {/* ///Mission */}
           <TopNav
             setActiveLink={setActiveLink}
             bgimg={missionbg}
@@ -119,14 +161,39 @@ comprehensive concept paper.`,
             description={`At Hungary Pakistan Business Council, we are passionate about creating a thriving business
             ecosystem that benefits both countries. We believe that by working together,
             we can unlock new opportunities for growth and success.`}
-            textColor={"red"}
+            textColor={"#Ff0021"}
             descriptionColor={"#536068"}
             BgColor={""}
           />
           <News news={missions} />
+          <CustomeTDR
+            customeTitle={"The future we imagine"}
+            description={`Through our networking events, business forums, and trade missions,
+            we aim to foster closer relationships and stronger partnerships between Pakistani
+            and Hungarian businesses. We also provide market research, trade information,
+            and other resources to help our members navigate the unique challenges
+            and opportunities of doing business in each other‘s markets.`}
+            textColor={`#Ffffff`}
+            descriptionColor={"#Ffffff"}
+            BgColor={"#640414"}
+          />
+          <CustomeTDR
+            customeTitle={"The Values that guide us"}
+            description={`Our vision is to create a dynamic business ecosystem that facilitates cross-border trade,
+              investment, and innovation between Hungary and Pakistan. We believe that by working
+              together, we can unlock new opportunities and create lasting value for our members and
+              the wider business community.We are committed to building a better future for Hungary
+              and Pakistan through sustainable business partnerships.
+              Join us on this journey of growth and prosperity.`}
+            textColor={`#34493c`}
+            descriptionColor={"#536068"}
+            BgColor={"#Ffffff"}
+          />
+          <News news={missions1} />
           <Footer />
         </>
-      ) : activeLink === "event" ? (
+      ) : //  Events
+      activeLink === "event" ? (
         <>
           <TopNav
             setActiveLink={setActiveLink}
@@ -135,20 +202,62 @@ comprehensive concept paper.`,
             title={"We perceive challenges as chances."}
           />
 
+          <CustomeEvent />
+
+          <CustomeTDR
+            customeTitle={"The future we imagine "}
+            description={`Through our networking events, business forums, and trade missions,
+              we aim to foster closer relationships and stronger partnerships between Pakistani
+              and Hungarian businesses. We also provide market research, trade information,
+              and other resources to help our members navigate the unique challenges
+              and opportunities of doing business in each other‘s markets.`}
+            textColor={`#Ffffff`}
+            descriptionColor="#Ffffff"
+            BgColor={"#640414"}
+          />
+
           <Footer />
         </>
       ) : activeLink === "relations" ? (
         <>
-          <>
-            <TopNav
-              setActiveLink={setActiveLink}
-              bgimg={relationbg}
-              underline={activeLink}
-              title={"We think long term."}
-            />
+          <TopNav
+            setActiveLink={setActiveLink}
+            bgimg={relationbg}
+            underline={activeLink}
+            title={"We think long term."}
+          />
+          <CustomeTDR
+            customeTitle={"Diplomatic Relations"}
+            description={`Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.
+                Lorem ipsum. Lorem ipsum. Lorem ipsum.
+                Lorem ipsum.`}
+            textColor={`#Ff0021`}
+            descriptionColor={"#34493c"}
+            BgColor={""}
+          />
+          <VerticalTimeline />
 
-            <Footer />
-          </>
+          <Footer />
+        </>
+      ) : activeLink === "team" ? (
+        <>
+          <TopNav
+            setActiveLink={setActiveLink}
+            bgimg={teambg}
+            underline={activeLink}
+            title={"We think long term."}
+          />
+          <CustomeTDR
+            customeTitle={"Diplomatic Relations"}
+            description={`Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.
+                Lorem ipsum. Lorem ipsum. Lorem ipsum.
+                Lorem ipsum.`}
+            textColor={`#Ff0021`}
+            descriptionColor={"#630414"}
+            BgColor={""}
+          />
+          <CustomeTeam />
+          <Footer />
         </>
       ) : (
         <></>

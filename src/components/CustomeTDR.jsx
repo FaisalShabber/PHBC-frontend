@@ -6,6 +6,7 @@ function CustomeTDR({
   textColor,
   BgColor,
   descriptionColor,
+  customeReadMore,
 }) {
   return (
     <div className={`bg-[${BgColor}]`}>
@@ -22,13 +23,15 @@ function CustomeTDR({
             {description}
           </h1>
 
-          <div className="flex justify-center ">
-            <button
-              className={`text-[${textColor}] pb-16 text-3xl underline underline-offset-8`}
-            >
-              Read More.
-            </button>
-          </div>
+          {customeReadMore && (
+            <div className="flex justify-center ">
+              <button
+                className={`text-[${textColor}] pb-16 text-3xl underline underline-offset-8`}
+              >
+                Read More.
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -1,6 +1,11 @@
 import React from "react";
 
-const EventComponent = ({ eventDate, eventDateColor, eventDiscription }) => {
+const EventComponent = ({
+  eventDate,
+  eventDateColor,
+  eventDiscription,
+  eventCountry,
+}) => {
   return (
     <div className="text-center mb-5 lg:mb-0 w-[30%]">
       <h1
@@ -12,7 +17,7 @@ const EventComponent = ({ eventDate, eventDateColor, eventDiscription }) => {
         {eventDiscription}
       </p>
       <button className="text-[#536068] pb-10 text-2xl underline mt-10 text-center">
-        Read More.
+        {eventCountry}
       </button>
     </div>
   );
