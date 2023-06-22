@@ -31,7 +31,7 @@ const Footer = () => {
                     </Link>
                   </div>
                 </li>
-                <hr class="border-1 border-[#536068] mt-5 w-[85%] lg:ml-10 " />
+                <hr className="border-1 border-[#536068] mt-5 w-[85%] lg:ml-10 " />
                 <div className="lg:p-8 lg:text-xl text-[11px] text-[#536068]">
                   <h2>OUR MISSION</h2>
                   <h3 className="lg:mt-5">
@@ -108,7 +108,7 @@ const Footer = () => {
                     </div>
                   </div>
 
-                  <hr class="border-1 border-[#536068] mt-5 w-[85%] lg:ml-10" />
+                  <hr className="border-1 border-[#536068] mt-5 w-[85%] lg:ml-10" />
                   <div className="flex">
                     <div className="lg:w-[50%] lg:p-8 p-2 lg:text-xl text-[11px]  text-[#536068]">
                       <h2>PK OFFICE</h2>

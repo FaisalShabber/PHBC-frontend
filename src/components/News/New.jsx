@@ -17,8 +17,9 @@ export const News = ({ news, CustomeNewsHeading, CustomeArticleHeading }) => {
 
       <div className="flex lg:flex-row flex-col justify-center flex-wrap gap-5">
         {news &&
-          news.map((item) => (
+          news.map((item,index) => (
             <NewsComponent
+            key={index}
               title={item.title}
               photo={item.photo}
               discription={item.discription}

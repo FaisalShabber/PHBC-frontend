@@ -10,7 +10,7 @@ const NavbarComponent = ({ logo, title, setActiveLink, underline ,shawMenu}) => 
           <div className="flex align-canter items-center">
             {/* desktop nav */}
            
-            <div className="mt-[-5rem] md:mt-[5rem] md:flex text-transform: uppercase justify-between lg:mt-[5rem] lg:px-20">
+            <div className="mt-[-2rem] md:mt-[5rem] md:flex text-transform: uppercase justify-between lg:mt-[5rem] lg:px-20">
               {shawMenu && <ul className="p-5  " >
                 <li className="mb-5" onClick={() => setActiveLink("about")}>
                   <p
@@ -97,7 +97,7 @@ const NavbarComponent = ({ logo, title, setActiveLink, underline ,shawMenu}) => 
             </div>
           </div>
           <div className="float-right 2xl:pr-[10rem] lg:pr-[5rem] pb-5 ml-10 lg:pb-10">
-            <h1 class="text-1px lg:text-6xl  text-white tracking-wider font-serif ">
+            <h1 className="text-1px lg:text-6xl  text-white tracking-wider font-serif ">
               {title}
             </h1>
           </div>
