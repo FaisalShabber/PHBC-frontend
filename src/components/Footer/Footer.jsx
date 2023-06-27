@@ -46,11 +46,11 @@ const Footer = () => {
               </ul>
             </div>
             {/* 2 col */}
-            <div className="lg:w-[33%] flex lg:flex-col lg:justify-center  items-center">
+            <div className="lg:w-[33%]  flex lg:flex-col lg:justify-center  items-center">
               <Link to="#" className="flex">
                 <div className="cursor-pointer">
                   <img
-                    className="2xl:w-full lg:w-[50] w-[30%]  2xl:px-28"
+                    className="2xl:w-full lg:w-full w-[30%]  2xl:px-28"
                     src={logo}
                     alt="broken"
                   />

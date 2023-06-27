@@ -3,7 +3,7 @@ import EventComponent from "./EventComponent";
 // import fp1 from "../../../src/assets/fp1.png";
 // import fp4 from "../../../src/assets/fp4.png";
 
-export const Events = () => {
+export const Events = ({ setActiveLink }) => {
   return (
     <div className="flex justify-center  lg:flex-row flex-col 2xl:px-20 ">
       <div className="flex-1 py-[6rem]">
@@ -26,7 +26,10 @@ export const Events = () => {
         </div>
 
         <div className="text-center ">
-          <p className="underline underline-offset-8 text-[#34493c] lg:text-4xl ">
+          <p
+            className="underline underline-offset-8 text-[#34493c] lg:text-4xl cursor-pointer "
+            onClick={() => setActiveLink("event")}
+          >
             Explore and join our events
           </p>
         </div>

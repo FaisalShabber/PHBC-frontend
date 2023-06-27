@@ -1,6 +1,6 @@
 import React from "react";
 
-const NewsComponent = ({ discription, title, photo }) => {
+const NewsComponent = ({ discription, photo, readMore, title }) => {
   return (
     <div className="flex-1">
       <img
@@ -9,19 +9,22 @@ const NewsComponent = ({ discription, title, photo }) => {
         width={photo}
         alt="broken"
         priority={true}
-        className="w-full h-[55%] mb-2 "
+        className="w-full lg:h-[50%] 2xl:h-[60%] mb-2 "
       />
 
-      <h1 className="px-1 lg:text-2xl 2xl:text-2xl text-[14px] text-[#536068] mb-2">
+      <h1 className="  lg:text-xl 2xl:text-2xl font-semibold text-[14px] text-[#536068] mb-2">
         {title}
       </h1>
-      <p className="text-[11px] lg:text-2xl font-normal px-1">
+      <p className="text-[11px] lg:text-xl">
         {discription}
         <br />
         <br />
-        {/* <span className="text-[#536068] underline underline-offset-8 cursor-pointer ">
-          Read more
-        </span>{" "} */}
+
+        {readMore && (
+          <div className="text-[#536068] underline underline-offset-8 cursor-pointer ">
+            {readMore}
+          </div>
+        )}
       </p>
     </div>
   );

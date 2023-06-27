@@ -3,12 +3,12 @@ import AllEvents from "./AllEvents";
 
 const CustomeEvent = () => {
   return (
-    <div className="justify-center  lg:flex-row flex-col lg:px-8 ">
-      <div className="flex-1 py-[6rem] ">
+    <div className="justify-center  lg:flex-row flex-col  ">
+      <div className="flex-1 py-[5rem] ">
         <h1 className="text-[#34493c] lg:pb-20 pb-10 lg:text-5xl text-center text-[36px] ">
           Events
         </h1>
-        <div className="flex justify-center gap-6 ">
+        <div className="flex justify-center  lg:gap-[10rem] gap-6 ">
           {/* 1 */}
           <AllEvents
             eventDate={"10.6.23"}
@@ -29,7 +29,7 @@ const CustomeEvent = () => {
           />
         </div>
         {/* 3 */}
-        <div className="flex justify-center mt-10 gap-6">
+        <div className="flex justify-center mt-10 lg:gap-[10rem] gap-6">
           <AllEvents
             eventDate={"27.9.23"}
             eventDiscription={`International Online Conference on
@@ -50,7 +50,7 @@ const CustomeEvent = () => {
           />
         </div>
         {/* 5 */}
-        <div className="flex justify-center mt-10 gap-6">
+        <div className="flex justify-center mt-10 lg:gap-[10rem] gap-6">
           <AllEvents
             eventDate={"11.11.23"}
             eventDiscription={`International Conference on Chemical,
@@ -71,11 +71,11 @@ const CustomeEvent = () => {
           />
         </div>
       </div>
-      {/* <div className="text-center lg:pb-16 pb-10 ">
-        <p className="underline underline-offset-8 text-[#ff3c3c] lg:text-4xl ">
+      <div className="text-center lg:pb-16 pb-10 ">
+        <p className="underline underline-offset-8 text-[#ff3c3c] lg:text-3xl  ">
           Load more events
         </p>
-      </div>{" "} */}
+      </div>{" "}
     </div>
   );
 };

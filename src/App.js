@@ -28,7 +28,6 @@ import VerticalTimeline from "./components/VerticalTimeline";
 // import fp3 from "../../../src/assets/fp3.png";
 function App() {
   const [activeLink, setActiveLink] = useState("about");
-  
 
   const news = [
     {
@@ -40,6 +39,7 @@ CEOs attended the event.Jamil Ahmed Mayo and
 Istvan Grafjodi sat on HNL stall with description
 of moving towards the implementation plan.`,
       photo: fp1,
+      readMore: `Read More`,
     },
 
     {
@@ -48,6 +48,7 @@ of moving towards the implementation plan.`,
 Grafjodi in Lahore where he presented the concept paper that was higly appreciated by Istavan
 Grafjodi and he said he will discuss with ambassador and get back with his working notes.`,
       photo: fp2,
+      readMore: `Read More`,
     },
     {
       title: `First Meeting with Hungary‘s
@@ -57,6 +58,7 @@ Istvan Grafjodi, Commercial Counsellor at Hungary, to set up PHBC where Hungaria
 counselor asked to mature the idea by giving
 comprehensive concept paper.`,
       photo: fp3,
+      readMore: `Read More`,
     },
   ];
   const missions = [
@@ -133,19 +135,19 @@ commitment to long-term growth.`,
               in Pakistan and Hungary. Through our online resources and networking events,
               we aim to provide a space for individuals to connect and exchange information
               about business trends, regulations, and market insights.`}
-            textColor={" #536068"}
+            textColor={"#536068"}
             descriptionColor={"#536068"}
             BgColor={"#e2e1dc"}
-            // customeReadMore={"Read More"}
+            customeReadMore={"Read More"}
           />
           <News
             news={news}
-            CustomeNewsHeading={"What‘s new?"}
-            // CustomeArticleHeading={"To the articles"}
-            customReadMore={"ReadMore"}
+            CustomeNewsHeading={"What‘s News?"}
+            CustomeArticleHeading={"To the articles"}
+            readMore={"Read More"}
           />
           <Contribution />
-          <Events />
+          <Events setActiveLink={setActiveLink} />
           <Footer />
         </>
       ) : activeLink === "mission" ? (
@@ -167,29 +169,35 @@ commitment to long-term growth.`,
             BgColor={""}
           />
           <News news={missions} />
-          <CustomeTDR
-            customeTitle={"The future we imagine"}
-            description={`Through our networking events, business forums, and trade missions,
+
+          <div className="bg-[#640414]">
+            <CustomeTDR
+              customeTitle={"The future we imagine"}
+              description={`Through our networking events, business forums, and trade missions,
             we aim to foster closer relationships and stronger partnerships between Pakistani
             and Hungarian businesses. We also provide market research, trade information,
             and other resources to help our members navigate the unique challenges
             and opportunities of doing business in each other‘s markets.`}
-            textColor={`#Ffffff`}
-            descriptionColor={"#Ffffff"}
-            BgColor={"#640414"}
-          />
-          <CustomeTDR
-            customeTitle={"The Values that guide us"}
-            description={`Our vision is to create a dynamic business ecosystem that facilitates cross-border trade,
-              investment, and innovation between Hungary and Pakistan. We believe that by working
-              together, we can unlock new opportunities and create lasting value for our members and
-              the wider business community.We are committed to building a better future for Hungary
-              and Pakistan through sustainable business partnerships.
+              textColor={"white"}
+              descriptionColor={`white`}
+              // BgColor="#640414"
+            />
+          </div>
+
+          <div className="whitespace-pre-line">
+            <CustomeTDR
+              customeTitle={"The Values that guide us"}
+              description={`Our vision is to create a dynamic business ecosystem that facilitates cross-border 
+              trade investment, and innovation between Hungary and Pakistan. We believe that by 
+              working together, we can unlock new opportunities and create lasting value for our
+              members and the wider business community.We are committed to building a better 
+              future for Hungary and Pakistan through sustainable business partnerships.
+
               Join us on this journey of growth and prosperity.`}
-            textColor={`#34493c`}
-            descriptionColor={"#536068"}
-            BgColor={"#Ffffff"}
-          />
+              textColor={`#34493c`}
+              descriptionColor={"#536068"}
+            />
+          </div>
           <News news={missions1} />
           <Footer />
         </>
@@ -205,18 +213,19 @@ commitment to long-term growth.`,
 
           <CustomeEvent />
 
-          <CustomeTDR
-            customeTitle={"The future we imagine "}
-            description={`Through our networking events, business forums, and trade missions,
+          <div className="bg-[#640414]">
+            <CustomeTDR
+              customeTitle={"The future we imagine "}
+              description={`Through our networking events, business forums, and trade missions,
               we aim to foster closer relationships and stronger partnerships between Pakistani
               and Hungarian businesses. We also provide market research, trade information,
               and other resources to help our members navigate the unique challenges
               and opportunities of doing business in each other‘s markets.`}
-            textColor={`#Ffffff`}
-            descriptionColor="#Ffffff"
-            BgColor={"#640414"}
-          />
-
+              textColor={`white`}
+              descriptionColor={"white"}
+              BgColor={"#640414"}
+            />
+          </div>
           <Footer />
         </>
       ) : activeLink === "relations" ? (
@@ -246,15 +255,15 @@ commitment to long-term growth.`,
             setActiveLink={setActiveLink}
             bgimg={teambg}
             underline={activeLink}
-            title={"We think long term."}
+            title={"We welcome change."}
           />
           <CustomeTDR
-            customeTitle={"Diplomatic Relations"}
+            customeTitle={"Our Team"}
             description={`Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.
                 Lorem ipsum. Lorem ipsum. Lorem ipsum.
                 Lorem ipsum.`}
-            textColor={`#Ff0021`}
-            descriptionColor={"#630414"}
+            textColor={`#34493c`}
+            descriptionColor={"#536068"}
             BgColor={""}
           />
           <CustomeTeam />

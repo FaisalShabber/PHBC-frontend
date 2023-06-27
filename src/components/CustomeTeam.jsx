@@ -26,9 +26,9 @@ function CustomeTeam() {
           President
           <br />
           <br />
-          {/* <span className="text-[#Ff0021] underline underline-offset-8 cursor-pointer ">
+          <span className="text-[#Ff0021] underline underline-offset-8 cursor-pointer ">
             Contact
-          </span> */}
+          </span>
         </p>
       </div>
       <div className="">
@@ -52,9 +52,9 @@ function CustomeTeam() {
           Role
           <br />
           <br />
-          {/* <span className="text-[#Ff0021] underline underline-offset-8 cursor-pointer ">
+          <span className="text-[#Ff0021] underline underline-offset-8 cursor-pointer ">
             Contact
-          </span> */}
+          </span>
         </p>
       </div>
     </div>
