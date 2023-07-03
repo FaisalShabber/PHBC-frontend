@@ -7,9 +7,9 @@ const EventComponent = ({
   eventCountry,
 }) => {
   return (
-    <div className="text-center mb-5 lg:mb-0 w-[30%]">
+    <div className="text-center mb-5 w-[30%]">
       <h1
-        className={`text-[${eventDateColor}]  lg:text-8xl text-[48px] underline underline-offset-8`}
+        className={`text-[${eventDateColor}]  lg:text-7xl text-[48px] underline underline-offset-8`}
       >
         {eventDate}
       </h1>

@@ -27,7 +27,7 @@ export const Events = ({ setActiveLink }) => {
 
         <div className="text-center ">
           <p
-            className="underline underline-offset-8 text-[#34493c] lg:text-4xl cursor-pointer "
+            className="underline underline-offset-8 text-[#34493c] lg:text-2xl cursor-pointer "
             onClick={() => setActiveLink("event")}
           >
             Explore and join our events

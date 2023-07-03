@@ -16,7 +16,7 @@ function CustomeTDR({
         {customeTitle}
       </h1>
       <div className="flex justify-center lg:px-40 px-10  flex-col lg:flex-row ">
-        <div className="flex-1 pt-10 2xl:px-56 lg:px-30 ">
+        <div className="flex-1 pt-8 2xl:px-56 lg:px-30 ">
           <h1
             className={`mb-16  text-[${descriptionColor}] lg:text-2xl 2xl:text-3xl text-center tracking-wider leading-8`}
           >

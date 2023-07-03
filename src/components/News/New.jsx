@@ -33,8 +33,8 @@ export const News = ({
           ))}
       </div>
       {CustomeArticleHeading && (
-        <div className="text-center py-10 2xl:py-10 lg:py-12 2xl:mt-0 lg:mt-6">
-          <p className="underline underline-offset-4 text-red-700 lg:text-3xl  2xl:text-4xl ">
+        <div className="text-center py-10 2xl:py-10 lg:py-10 2xl:mt-0 lg:mt-14">
+          <p className="underline underline-offset-4 text-red-700 lg:text-2xl  2xl:text-4xl ">
             To the articles
           </p>
         </div>

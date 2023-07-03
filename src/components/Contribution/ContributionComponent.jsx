@@ -6,10 +6,10 @@ const ContributionComponent = ({ percentage, GDP }) => {
       <h1 className="text-white lg:text-7xl 2xl:text-8xl  text-[48px]">
         {percentage}
       </h1>
-      <p className="  lg:text-3xl text-[14px] text-[#e2ddda] 2xl:mt-10 lg:mt-6">
+      <p className="  lg:text-xl text-[14px] text-[#e2ddda] 2xl:mt-10 lg:mt-6">
         {GDP}
       </p>
-      <button className="text-[#e2ddda] 2xl:pb-4 lg:pb-2 text-2xl underline underline-offset-8 mt-10 text-center">
+      <button className="text-[#e2ddda] 2xl:pb-4 lg:pb-4 text-[1rem] underline underline-offset-8 mt-6 text-center">
         Read More.
       </button>
     </div>

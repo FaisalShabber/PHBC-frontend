@@ -1,10 +1,11 @@
 import React from "react";
 import owner from "../../src/assets/owner.png";
 import owner1 from "../../src/assets/owner2.png";
+import { Link } from "react-router-dom";
 
 function CustomeTeam() {
   return (
-    <div className="flex justify-center lg:gap-20 gap-5 p-5">
+    <div className="flex justify-center lg:gap-10 gap-5 p-5">
       <div className="">
         <img
           src={owner}
@@ -12,7 +13,7 @@ function CustomeTeam() {
           width={owner}
           alt="broken"
           priority={true}
-          className="w-full h-[70%] mb-2 "
+          className="w-[83%] lg:h-[65%] mb-2 "
         />
 
         <h1 className="px-1 lg:text-3xl  text-[14px] text-[#536068] mb-2">
@@ -26,9 +27,11 @@ function CustomeTeam() {
           President
           <br />
           <br />
-          <span className="text-[#Ff0021] underline underline-offset-8 cursor-pointer ">
-            Contact
-          </span>
+          <Link mailto="corporatecommunication@phbc.org.pk" target="_blank">
+            <span className="text-[#Ff0021] underline underline-offset-8 cursor-pointer ">
+              Contact
+            </span>
+          </Link>
         </p>
       </div>
       <div className="">
@@ -38,7 +41,7 @@ function CustomeTeam() {
           width={owner1}
           alt="broken"
           priority={true}
-          className="w-full h-[70%] mb-2 "
+          className="w-[83%] lg:h-[65%] mb-2 "
         />
 
         <h1 className="px-1 lg:text-3xl text-[14px] text-[#536068] mb-2">
@@ -52,9 +55,11 @@ function CustomeTeam() {
           Role
           <br />
           <br />
-          <span className="text-[#Ff0021] underline underline-offset-8 cursor-pointer ">
-            Contact
-          </span>
+          <Link to="corporatecommunication@phbc.org.pk" target="_blank">
+            <span className="text-[#Ff0021] underline underline-offset-8 cursor-pointer ">
+              Contact
+            </span>
+          </Link>
         </p>
       </div>
     </div>

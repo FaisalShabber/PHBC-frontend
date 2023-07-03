@@ -7,14 +7,14 @@ const Footer = () => {
   let date = new Date();
   date.getFullYear();
   return (
-    <footer id="footer" className="relative z-5 lg:pt-8   bg-[#e2e1dc]">
-      <div className="border-b dark:border-gray-300 py-5">
-        <div className=" px-10 gl:px-12  ">
+    <footer id="footer" className="relative z-5    bg-[#e2e1dc]">
+      <div className="border-b dark:border-gray-300">
+        <div className=" px-10">
           <div className="flex flex-col lg:flex-row gap-5">
             <div className="flex lg:w-[33%] lg:py-1">
               <ul>
-                <li className=" lg:mt-2">
-                  <div className="lg:p-10 text-[11px] lg:text-xl   text-[#536068] ">
+                <li className=" lg:mt-2 ">
+                  <div className="lg:p-10  text-[11px] lg:text-[1rem]   text-[#536068] ">
                     <Link to="tel: +92-423-5854071">
                       <p>t +92-423-5854071</p>
                       <br />
@@ -25,16 +25,22 @@ const Footer = () => {
                     </Link>
                     <Link
                       className="lg:mt-10"
-                      to="corporatecommunication@phbc.org.pk"
+                      mailto="corporatecommunication@phbc.org.pk"
+                      onClick={() =>
+                        window.open(
+                          "corporatecommunication@phbc.org.pk",
+                          "_blank"
+                        )
+                      }
                     >
                       {`corporatecommunication@phbc.org.pk`}
                     </Link>
                   </div>
                 </li>
-                <hr className="border-1 border-[#536068] mt-5 w-[85%] lg:ml-10 " />
-                <div className="lg:p-8 lg:text-xl text-[11px] text-[#536068]">
+                <hr className="border-1 border-[#536068] mt-3 w-[85%] lg:ml-8 " />
+                <div className="lg:p-8 lg:text-[15px] text-[11px]  text-[#536068]">
                   <h2>OUR MISSION</h2>
-                  <h3 className="lg:mt-5">
+                  <h3 className="lg:mt-2">
                     We believe that collaboration is key to achieving our goal
                     of creating thriving nations, and a just and healthier
                     world. By bringing together businesses, entrepreneurs,
@@ -46,7 +52,7 @@ const Footer = () => {
               </ul>
             </div>
             {/* 2 col */}
-            <div className="lg:w-[33%]  flex lg:flex-col lg:justify-center  items-center">
+            <div className="lg:w-[30%]  flex lg:flex-col lg:justify-center  items-center">
               <Link to="#" className="flex">
                 <div className="cursor-pointer">
                   <img
@@ -57,7 +63,7 @@ const Footer = () => {
                 </div>
               </Link>
 
-              <div className="lg:mt-8 lg:text-sm lg:w-[60%] text-[11px] mt-2  font-semibold text-center text-[#536068] ">
+              <div className="lg:mt-[4.8rem] lg:text-sm lg:w-[60%] text-[11px] mt-2 text-center text-[#536068] ">
                 {date.getFullYear()} PHBC <br />
                 All Rights Reserved
               </div>
@@ -67,7 +73,7 @@ const Footer = () => {
               <div className="">
                 <ul>
                   <div className="flex">
-                    <div className="lg:p-8  text-[11px] lg:text-2xl lg:w-[50%] text-[#536068] ">
+                    <div className="lg:p-10  text-[11px] lg:text-[1rem] lg:w-[50%] text-[#536068] ">
                       <p>CONNECT</p>
                       <br />
                       <Link
@@ -83,47 +89,41 @@ const Footer = () => {
                           Linkedin
                         </h2>
                       </Link>
-                      <Link
-                        to="https://twitter.com/PakHungrain?t=lmSv7CsNJcVoWMB4T07ZdA&s=08"
-                        target="_blank"
-                      >
+                      <Link to="" target="_blank">
                         <h2 className="underline underline-offset-4">
                           Twitter
                         </h2>
                       </Link>
                     </div>
-                    <div className="lg:ml-0 ml-[8rem] lg:p-10 text-[11px] 2xl:text-2xl lg:text-xl lg:mt-2 lg:w-[50%] text-[#536068] ">
+                    <div className="lg:ml-0 ml-[8rem] lg:p-10 text-[11px]  lg:text-[1rem] lg:mt-2 lg:w-[50%] text-[#536068] ">
                       <br />
                       <br />
-
-                      <Link
-                        to="https://www.facebook.com/PHBC11"
-                        target="_blank"
-                      >
-                        <h2 className="">TERMS OF USE</h2>
-                      </Link>
                       <Link to="">
-                        <h2 className="">PRIVACY POLICY</h2>
+                        <p className="">TERMS OF USE</p>
+                      </Link>
+
+                      <Link to="">
+                        <p className="">PRIVACY POLICY</p>
                       </Link>
                     </div>
                   </div>
 
-                  <hr className="border-1 border-[#536068] mt-5 w-[85%] lg:ml-10" />
-                  <div className="flex">
-                    <div className="lg:w-[50%] lg:p-8 p-2 lg:text-xl text-[11px]  text-[#536068]">
-                      <h2>PK OFFICE</h2>
-                      <h3 className="mt-5">
+                  <hr className="border-1 border-[#536068] mt-3 w-[85%] lg:ml-8" />
+                  <div className="flex ">
+                    <div className=" lg:p-8 p-2 lg:text-[1rem] text-[11px]  text-[#536068]">
+                      <h2>LOCATION</h2>
+                      <h3 className="mt-2">
                         Lower Ground Floor Commercial Arcade, Divine Gardens,
                         New Airport Road Lahore, Pakistan
                       </h3>
                     </div>
-                    <div className="lg:w-[50%] lg:p-8 p-2 lg:text-xl text-[11px] text-[#536068]">
+                    {/* <div className="lg:w-[50%] lg:p-8 p-2 lg:text-xl text-[11px] text-[#536068]">
                       <h2>HU OFFICE</h2>
                       <h3 className="mt-5 line-through">
                         Lower Ground Floor Commercial Arcade, Divine Gardens,
                         New Airport Road Lahore, Pakistan
                       </h3>
-                    </div>
+                    </div> */}
                   </div>
                 </ul>
               </div>

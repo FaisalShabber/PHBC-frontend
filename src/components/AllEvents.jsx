@@ -10,11 +10,11 @@ const AllEvents = ({
   return (
     <div className="text-center mb-5 lg:w-[30%] w-[40%] gap-10 lg:gap-0">
       <h1
-        className={`text-[${textColor}] lg:pb-10 lg:text-8xl text-[30px] underline underline-offset-8`}
+        className={`text-[${textColor}] lg:pb-10 lg:text-7xl text-[30px] underline underline-offset-8`}
       >
         {eventDate}
       </h1>
-      <p className="h-24  lg:h-32  lg:text-3xl text-[14px] text-[#536068] mt-10 2xl:px-10">
+      <p className="h-24  lg:h-32  lg:text-3xl text-[14px] text-[#536068] mt-2 2xl:px-10">
         {eventDiscription}
       </p>
       <div className="">

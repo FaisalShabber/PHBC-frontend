@@ -238,9 +238,7 @@ commitment to long-term growth.`,
           />
           <CustomeTDR
             customeTitle={"Diplomatic Relations"}
-            description={`Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.
-                Lorem ipsum. Lorem ipsum. Lorem ipsum.
-                Lorem ipsum.`}
+            description={``}
             textColor={`#Ff0021`}
             descriptionColor={"#34493c"}
             BgColor={""}
@@ -259,9 +257,7 @@ commitment to long-term growth.`,
           />
           <CustomeTDR
             customeTitle={"Our Team"}
-            description={`Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.
-                Lorem ipsum. Lorem ipsum. Lorem ipsum.
-                Lorem ipsum.`}
+            description={``}
             textColor={`#34493c`}
             descriptionColor={"#536068"}
             BgColor={""}
