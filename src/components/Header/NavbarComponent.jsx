@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
+import { BsFacebook } from "react-icons/bs";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { BsLinkedin } from "react-icons/bs";
 
 // AiOutlineMenu
 const NavbarComponent = ({
@@ -10,20 +13,20 @@ const NavbarComponent = ({
   underline,
   shawMenu,
 }) => {
-  const [open, setOpen] = useState(true);
+  // const [open, setOpen] = useState(true);
   return (
     <>
-      <div className="">
+      <div className="Navfont">
         <div className="flex align-canter items-center">
           {/* desktop nav */}
 
-          <div className="mt-[-2rem] lg:mt-[3rem] md:flex text-transform: uppercase justify-between 2xl:mt-[8rem] lg:px-20">
+          <div className="mt-[0rem] lg:mt-[5rem] md:flex text-transform: uppercase justify-between 2xl:mt-[8rem] lg:px-20">
             {shawMenu && (
               <ul className="p-5  ">
                 <li className="mb-5" onClick={() => setActiveLink("about")}>
                   <p
-                    className={` text-white hover:text-slate-200 lg:text-4xl text-3xl underline-offset-8 cursor-pointer tracking-widest ${
-                      underline === "about" ? "underline" : "no-underline"
+                    className={` text-white hover:text-slate-200 lg:text-3xl 2xl:text-4xl text-2xl underline-offset-8 cursor-pointer tracking-widest ${
+                      underline === "about" ? "underline" : "no-underline font-"
                     }`}
                   >
                     ABOUT PHBC
@@ -32,7 +35,7 @@ const NavbarComponent = ({
                 <li className="mb-5" onClick={() => setActiveLink("mission")}>
                   <p
                     to=""
-                    className={` text-white hover:text-slate-200 lg:text-4xl text-3xl underline-offset-8 cursor-pointer tracking-widest ${
+                    className={` text-white hover:text-slate-200 lg:text-3xl 2xl:text-4xl text-2xl underline-offset-8 cursor-pointer tracking-widest ${
                       underline === "mission" ? "underline" : "no-underline"
                     }`}
                   >
@@ -41,7 +44,7 @@ const NavbarComponent = ({
                 </li>
                 <li className="mb-5" onClick={() => setActiveLink("event")}>
                   <p
-                    className={` text-white hover:text-slate-200 lg:text-4xl text-3xl underline-offset-8 cursor-pointer tracking-widest ${
+                    className={` text-white hover:text-slate-200 lg:text-3xl 2xl:text-4xl text-2xl underline-offset-8 cursor-pointer tracking-widest ${
                       underline === "event" ? "underline" : "no-underline"
                     }`}
                   >
@@ -53,16 +56,11 @@ const NavbarComponent = ({
                   onClick={() => setActiveLink("relations")}
                 >
                   <p
-                    className={` text-white hover:text-slate-200 lg:text-4xl text-3xl underline-offset-8 cursor-pointer tracking-widest ${
+                    className={` text-white hover:text-slate-200 lg:text-3xl 2xl:text-4xl text-2xl underline-offset-8 cursor-pointer tracking-widest ${
                       underline === "relations" ? "underline" : "no-underline"
                     }`}
                   >
                     RELATIONS
-                  </p>
-                </li>
-                <li className="mb-5">
-                  <p className="text-white hover:text-slate-200 lg:text-2xl text-xl tracking-wider">
-                    Research & Initiatives
                   </p>
                 </li>
                 <li className="mb-5">
@@ -84,14 +82,18 @@ const NavbarComponent = ({
                     Team
                   </p>
                 </li>
-                <li className="mb-5">
-                  <p className="text-white hover:text-slate-200 text-xl tracking-wider">
+                <li className="mb-5" onClick={() => setActiveLink("contact")}>
+                  <p
+                    className={` text-white hover:text-slate-200 lg:text-2xl text-xl underline-offset-8 cursor-pointer tracking-widest ${
+                      underline === "contact" ? "underline" : "no-underline"
+                    }`}
+                  >
                     Contact
                   </p>
                 </li>
               </ul>
             )}
-            <div className=" w-2/12 float float-right  lg:w-3/12 lg:float-right">
+            <div className=" w-2/12  float-right mt-[-5rem] mr-8 lg:mt-0 lg:w-[22%] lg:float-right">
               <Link className="" href="/">
                 <img
                   src={logo}
@@ -105,10 +107,24 @@ const NavbarComponent = ({
             </div>
           </div>
         </div>
-        <div className="float-right  lg:pr-[4rem] 2xl:pt-[10rem] pb-5 ml-10  2xl:pb-10">
-          <h1 className="text-1px lg:text-[3rem] font-light  text-white tracking-wider font-serif ">
+        <div className="h-[6rem] lg:float-right lg:pr-[4rem] pr-2 mt-10 2xl:pt-[5rem] pb-5 text-center  2xl:pb-10">
+          <p className="text-2xl lg:text-[3rem] 2xl:text-[4rem] font-light  text-white tracking-wider font-serif ">
             {title}
-          </h1>
+          </p>
+        </div>
+        <div className="justify-center lg:justify-normal  pt-[1rem] flex lg:pt-[5rem] 2xl:pt-[14rem] gap-10 pb-5 lg:ml-[6rem]">
+          <Link to="https://www.facebook.com/PHBC11" target="_blank">
+            <BsFacebook className="text-3xl opacity-50" />
+          </Link>
+          <Link
+            to="https://twitter.com/PakHungrain?t=lmSv7CsNJcVoWMB4T07ZdA&s=08"
+            target="_blank"
+          >
+            <AiFillTwitterCircle className="text-4xl opacity-50" />
+          </Link>
+          <Link to="" target="_blank">
+            <BsLinkedin className="text-3xl opacity-50" />
+          </Link>
         </div>
       </div>
     </>

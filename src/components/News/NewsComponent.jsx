@@ -9,19 +9,19 @@ const NewsComponent = ({ discription, photo, readMore, title }) => {
         width={photo}
         alt="broken"
         priority={true}
-        className="w-full lg:h-[50%] 2xl:h-[60%] mb-5 "
+        className="w-full lg:h-[48%] 2xl:h-[60%] mb-5 "
       />
 
       <h1 className="  lg:text-2xl 2xl:text-2xl font-medium text-[14px] text-[#536068]  mb-5">
         {title}
       </h1>
-      <p className="text-[11px] lg:text-xl text-[#536068]">
+      <p className="text-[11px] lg:text-xl  text-[#536068]">
         {discription}
         <br />
         <br />
 
         {readMore && (
-          <div className="text-[#536068] underline underline-offset-8 cursor-pointer ">
+          <div className="text-[#536068] text-base underline underline-offset-8 cursor-pointer ">
             {readMore}
           </div>
         )}

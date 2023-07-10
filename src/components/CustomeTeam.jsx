@@ -1,66 +1,45 @@
 import React from "react";
 import owner from "../../src/assets/owner.png";
-import owner1 from "../../src/assets/owner2.png";
-import { Link } from "react-router-dom";
+import owner1 from "../../src/assets/owner1.jpeg";
+import owner2 from "../../src/assets/owner2.jpeg";
+import owner3 from "../../src/assets/owner3.jpeg";
+import TeamImage from "./TeamImage";
 
-function CustomeTeam() {
+function CustomeTeam({ setActiveLink }) {
   return (
-    <div className="flex justify-center lg:gap-10 gap-5 p-5">
-      <div className="">
-        <img
-          src={owner}
-          height={owner}
-          width={owner}
-          alt="broken"
-          priority={true}
-          className="w-[83%] lg:h-[65%] mb-2 "
+    <div className="">
+      <div className="flex justify-center lg:px-40 2xl:px-80 lg:gap-32 2xl:gap-40 mb-5">
+        <TeamImage
+          ownerphoto={owner}
+          Name={"Jamil Ahmad Mayo"}
+          President={"President PBHC"}
+          CEO={"Founder & CEO HNL (Hitech Network (Pvt.) Limited)"}
+          setActiveLink={setActiveLink}
         />
-
-        <h1 className="px-1 lg:text-3xl  text-[14px] text-[#536068] mb-2">
-          Jamil A. Mayo
-        </h1>
-        <p className="text-[11px] lg:text-xl font-normal px-1">
-          CEO, Hitech Networks (HNL)
-          <br />
-          -
-          <br />
-          President
-          <br />
-          <br />
-          <Link mailto="corporatecommunication@phbc.org.pk" target="_blank">
-            <span className="text-[#Ff0021] underline underline-offset-8 cursor-pointer ">
-              Contact
-            </span>
-          </Link>
-        </p>
+        <TeamImage
+          ownerphoto={owner1}
+          Name={"Dr. Istvan Grafjodi"}
+          President={"Counsellor PBHC"}
+          CEO={"Commercial Counsellor at the Embassy of Hungary in Pakistan"}
+          setActiveLink={setActiveLink}
+        />
       </div>
-      <div className="">
-        <img
-          src={owner1}
-          height={owner1}
-          width={owner1}
-          alt="broken"
-          priority={true}
-          className="w-[83%] lg:h-[65%] mb-2 "
+      <div className="flex justify-center lg:px-40 2xl:px-80  lg:gap-32 2xl:gap-40 mb-5">
+        <TeamImage
+          ownerphoto={owner2}
+          Name={"Mr. Béla Fazekas"}
+          President={"Patron-in-Chief PHBC"}
+          CEO={"Hungarian Ambassador"}
+          setActiveLink={setActiveLink}
         />
 
-        <h1 className="px-1 lg:text-3xl text-[14px] text-[#536068] mb-2">
-          Dr. Istvan Grafjodi
-        </h1>
-        <p className="text-[11px] lg:text-xl font-normal px-1">
-          Commercial Counsellor at the Embassy of Hungary in Pakistan
-          <br />
-          -
-          <br />
-          Role
-          <br />
-          <br />
-          <Link to="corporatecommunication@phbc.org.pk" target="_blank">
-            <span className="text-[#Ff0021] underline underline-offset-8 cursor-pointer ">
-              Contact
-            </span>
-          </Link>
-        </p>
+        <TeamImage
+          ownerphoto={owner3}
+          Name={"Lara N. Lone"}
+          President={"Counsel Secretary"}
+          CEO={"Global Account Manager at Hitech Network (Pvt.) Limited"}
+          setActiveLink={setActiveLink}
+        />
       </div>
     </div>
   );

@@ -2,7 +2,6 @@ import "./App.css";
 import { useState } from "react";
 import TopNav from "../src/components/Header/TopNav";
 import { News } from "./components/News/New";
-// import { AboutUs } from "./components/AboutUs/AboutUs";
 import { Contribution } from "./components/Contribution/Contribution";
 import { Events } from "./components/Events/Events";
 import Footer from "./components/Footer/Footer";
@@ -11,6 +10,7 @@ import missionbg from "../src/assets/missionbg.jpg";
 import eventbg from "../src/assets/eventbg.jpg";
 import relationbg from "../src/assets/relationbg.jpg";
 import teambg from "../src/assets/teambg.jpg";
+import contactbg from "./assets/6_contact/anthony-fomin-yt0kE4YlVnI-unsplash.jpg";
 import fp1 from "../src/assets/fp1.png";
 import fp2 from "../src/assets/fp2.png";
 import fp3 from "../src/assets/fp3.png";
@@ -24,8 +24,27 @@ import CustomeTDR from "./components/CustomeTDR";
 import CustomeEvent from "./components/CustomeEvent";
 import CustomeTeam from "./components/CustomeTeam";
 import VerticalTimeline from "./components/VerticalTimeline";
-// import fp2 from "../../../src/assets/fp2.png";
-// import fp3 from "../../../src/assets/fp3.png";
+import h2 from "./assets/0_home/h2.jpg";
+import h3 from "./assets/0_home/h3.jpg";
+import m1 from "./assets/1_mission/zalfa-imani-rFOtjUbYGSQ-unsplash.jpg";
+import m2 from "./assets/1_mission/maranda-vandergriff-7aakZdIl4vg-unsplash.jpg";
+import e1 from "./assets/2_events/dom-fou-YRMWVcdyhmI-unsplash.jpg";
+import e2 from "./assets/2_events/luca-bravo-YoelVcKWmws-unsplash.jpg";
+import r1 from "./assets/3_relations/qasim-nagori-1x3qakkpzZU-unsplash.jpg";
+import r2 from "./assets/3_relations/muhammad-abdullah-HYzrAtfwjEk-unsplash.jpg";
+import t1 from "./assets/5_team/redd-f-5U_28ojjgms-unsplash.jpg";
+import t2 from "./assets/5_team/austin-kehmeier-lyiKExA4zQA-unsplash.jpg";
+import c1 from "./assets/6_contact/richard-stachmann-8F_a_8esOkw-unsplash.jpg";
+import c2 from "./assets/6_contact/adomas-aleno--ySLeov8m_8-unsplash.jpg";
+import Contact from "./components/Contact.jsx/Contact";
+
+const homeImages = [h2, h3];
+const missionImages = [m1, m2];
+const eventImages = [e1, e2];
+const relationImages = [r1, r2];
+const teamImages = [t1, t2];
+const contactImages = [c1, c2];
+
 function App() {
   const [activeLink, setActiveLink] = useState("about");
 
@@ -115,6 +134,7 @@ commitment to long-term growth.`,
       photo: mission6,
     },
   ];
+
   return (
     <>
       {activeLink === "about" ? (
@@ -124,22 +144,25 @@ commitment to long-term growth.`,
             setActiveLink={setActiveLink}
             underline={activeLink}
             bgimg={h1}
+            caroseldata={homeImages}
             title={"We aim at impactful trade."}
           />
 
-          <CustomeTDR
-            customeTitle={"Welcome to the Pakistan Hungary Business Council"}
-            description={`Here, you will find information about our organization and its mission to foster
+          <div className="bg-[#e2e1dc]">
+            <CustomeTDR
+              customeTitle={"Welcome to the Pakistan Hungary Business Council"}
+              description={`Here, you will find information about our organization and its mission to foster
               strong economic ties between Pakistan and Hungary. Our council serves as a platform
               for businesses and professionals who are interested in exploring opportunities
               in Pakistan and Hungary. Through our online resources and networking events,
               we aim to provide a space for individuals to connect and exchange information
               about business trends, regulations, and market insights.`}
-            textColor={"#536068"}
-            descriptionColor={"#536068"}
-            BgColor={"#e2e1dc"}
-            customeReadMore={"Read More"}
-          />
+              textColor={"#536068"}
+              descriptionColor={"#536068"}
+              BgColor={"#e2e1dc"}
+              customeReadMore={"Read More"}
+            />
+          </div>
           <News
             news={news}
             CustomeNewsHeading={"What‘s News?"}
@@ -156,6 +179,7 @@ commitment to long-term growth.`,
           <TopNav
             setActiveLink={setActiveLink}
             bgimg={missionbg}
+            caroseldata={missionImages}
             underline={activeLink}
             title={"We believe in prosperous relationships."}
           />
@@ -164,7 +188,7 @@ commitment to long-term growth.`,
             description={`At Hungary Pakistan Business Council, we are passionate about creating a thriving business
             ecosystem that benefits both countries. We believe that by working together,
             we can unlock new opportunities for growth and success.`}
-            textColor={"#Ff0021"}
+            textColor={"#34493c"}
             descriptionColor={"#536068"}
             BgColor={""}
           />
@@ -207,6 +231,7 @@ commitment to long-term growth.`,
           <TopNav
             setActiveLink={setActiveLink}
             bgimg={eventbg}
+            caroseldata={eventImages}
             underline={activeLink}
             title={"We perceive challenges as chances."}
           />
@@ -227,12 +252,13 @@ commitment to long-term growth.`,
             />
           </div>
           <Footer />
-        </>
+        </> //  Relations
       ) : activeLink === "relations" ? (
         <>
           <TopNav
             setActiveLink={setActiveLink}
             bgimg={relationbg}
+            caroseldata={relationImages}
             underline={activeLink}
             title={"We think long term."}
           />
@@ -244,25 +270,65 @@ commitment to long-term growth.`,
             BgColor={""}
           />
           <VerticalTimeline />
-
+          {/* <RelationPoint /> */}
           <Footer />
         </>
-      ) : activeLink === "team" ? (
+      ) : //  Team
+      activeLink === "team" ? (
         <>
           <TopNav
             setActiveLink={setActiveLink}
             bgimg={teambg}
+            caroseldata={teamImages}
             underline={activeLink}
             title={"We welcome change."}
           />
           <CustomeTDR
-            customeTitle={"Our Team"}
-            description={``}
+            customeTitle={"Meet the Team"}
+            description={`As a group of qualified professionals from diverse backgrounds and disciplines,
+            we bring extensive experience and knowledge to the table to uncover untapped business 
+            opportunities between Pakistan and Hungary in order to strengthen economic ties
+            between the nations in a sustainable and successful manner. 
+            
+            "We are convinced that a relationship can only be successful
+            if it is based on mutual respect, fairness, and equality.`}
             textColor={`#34493c`}
             descriptionColor={"#536068"}
             BgColor={""}
           />
-          <CustomeTeam />
+          <CustomeTeam setActiveLink={setActiveLink} />
+
+          <CustomeTDR
+            customeTitle={"Become a member"}
+            description={`Join us in our mission to promote bilateral trade and investment between
+              the two countries. Become a member of the Pakistan Hungary Business Council
+              and start unlocking new opportunities for growth and success.`}
+            textColor={`white`}
+            descriptionColor={"white"}
+            BgColor={"#34493c"}
+          />
+
+          <Footer />
+        </> //  Contact us
+      ) : activeLink === "contact" ? (
+        <>
+          <TopNav
+            setActiveLink={setActiveLink}
+            bgimg={contactbg}
+            caroseldata={contactImages}
+            underline={activeLink}
+            title={"We believe in bilateral cooperation at eye level."}
+          />
+          <CustomeTDR
+            customeTitle={"Contact"}
+            description={`Please let us know if you have any questions 
+            or would like more information about us and our activities.
+            We will be happy to help and look forward to hearing from you.`}
+            textColor={`#34493c`}
+            descriptionColor={"#34493c"}
+            BgColor={""}
+          />
+          <Contact />
           <Footer />
         </>
       ) : (

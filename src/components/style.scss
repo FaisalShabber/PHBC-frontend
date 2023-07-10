@@ -1,5 +1,6 @@
 @use "sass:color"; // To use transparentize().
 
+
 $max-width: 1200px;
 
 $color-bg-discs: white;
@@ -11,7 +12,7 @@ $timeline-line-width: 1px; // Width of the timeline line.
 $timeline-left-margin: 2em; // Distance on the left of the line.
 $timeline-left-padding: 2em; // Distance between the line and the text.
 $timeline-bottom-padding: 3em; // Length of the line below the last item.
-$timeline-bullet-width: 0.7em; // Diameter of the bullet point on the timeline.
+$timeline-bullet-width: 0.6em; // Diameter of the bullet point on the timeline.
 
 html {
   box-sizing: border-box;
@@ -48,13 +49,6 @@ html {
 }
 
 
-.timelines {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding-left: 22rem;
-}
 
 h2.timeline-title {
   font-size: 1.5em;
@@ -68,20 +62,8 @@ ul.timeline-items {
   padding: 0.01em 0 $timeline-bottom-padding $timeline-left-padding;
   border-left: $timeline-line-width solid $color-timeline;
 }
-.dates {
-  position: absolute;
-  /* top: 7px; */
-  // margin-top: -25px;
-  color: red;
-  margin-left: -190px;
-  font-size: 35px;
-}
-.dates2023 {
-  position: absolute;
-  color: #34493c;
-  margin-left: -190px;
-  font-size: 35px;
-}
+
+
 
 li.timeline-item {
   margin-bottom: 2em;
@@ -109,5 +91,7 @@ li.timeline-item {
 
 
 }
-
+.Navfont{
+  font-family: 'Abel', sans-serif;
+}
 
